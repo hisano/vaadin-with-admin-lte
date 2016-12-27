@@ -3,9 +3,9 @@ $v-relative-paths: false;
 @import "../valo/valo";
 @import "admin-lte";
 
-.admin-lte {
-  @include valo;
-}
+//.admin-lte {
+//  @include valo;
+//}
 
 .test {
 	color: red !important;
