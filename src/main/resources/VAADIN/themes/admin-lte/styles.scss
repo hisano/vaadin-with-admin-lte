@@ -1,3 +1,5 @@
+$v-relative-paths: false;
+
 @import "../valo/valo";
 @import "admin-lte";
 
@@ -6,5 +8,6 @@
 }
 
 .test {
-  color: red;
+	color: red !important;
+	margin-bottom: 0.5em;
 }

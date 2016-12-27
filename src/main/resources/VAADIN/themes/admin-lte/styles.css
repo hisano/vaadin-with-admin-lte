@@ -1062,8 +1062,8 @@
   font-family: ThemeIcons;
   font-weight: normal;
   font-style: normal;
-  src: url("../../../../base/fonts/themeicons-webfont.eot");
-  src: url("../../../../base/fonts/themeicons-webfont.eot?#iefix") format("embedded-opentype"), url("../../../../base/fonts/themeicons-webfont.woff") format("woff"), url("../../../../base/fonts/themeicons-webfont.ttf") format("truetype"), url("../../../../base/fonts/themeicons-webfont.svg#ThemeIcons") format("svg"); }
+  src: url("../base/fonts/themeicons-webfont.eot");
+  src: url("../base/fonts/themeicons-webfont.eot?#iefix") format("embedded-opentype"), url("../base/fonts/themeicons-webfont.woff") format("woff"), url("../base/fonts/themeicons-webfont.ttf") format("truetype"), url("../base/fonts/themeicons-webfont.svg#ThemeIcons") format("svg"); }
 .ThemeIcons {
   font-family: ThemeIcons;
   font-style: normal;
@@ -1077,8 +1077,8 @@
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
-  src: url("../../../../base/fonts/fontawesome-webfont.eot");
-  src: url("../../../../base/fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../../../../base/fonts/fontawesome-webfont.woff") format("woff"), url("../../../../base/fonts/fontawesome-webfont.ttf") format("truetype"), url("../../../../base/fonts/fontawesome-webfont.svg#FontAwesome") format("svg"); }
+  src: url("../base/fonts/fontawesome-webfont.eot");
+  src: url("../base/fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../base/fonts/fontawesome-webfont.woff") format("woff"), url("../base/fonts/fontawesome-webfont.ttf") format("truetype"), url("../base/fonts/fontawesome-webfont.svg#FontAwesome") format("svg"); }
 .FontAwesome {
   font-family: FontAwesome;
   font-style: normal;
@@ -1090,86 +1090,86 @@
 
 @font-face {
   font-family: 'Open Sans';
-  src: url("OpenSans-Light-webfont.eot");
-  src: url("OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("OpenSans-Light-webfont.woff") format("woff"), url("OpenSans-Light-webfont.ttf") format("truetype");
+  src: url("../valo/fonts/open-sans/OpenSans-Light-webfont.eot");
+  src: url("../valo/fonts/open-sans/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../valo/fonts/open-sans/OpenSans-Light-webfont.woff") format("woff"), url("../valo/fonts/open-sans/OpenSans-Light-webfont.ttf") format("truetype");
   font-weight: 300;
   font-style: normal; }
 @font-face {
   font-family: 'Open Sans';
-  src: url("OpenSans-Regular-webfont.eot");
-  src: url("OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("OpenSans-Regular-webfont.woff") format("woff"), url("OpenSans-Regular-webfont.ttf") format("truetype");
+  src: url("../valo/fonts/open-sans/OpenSans-Regular-webfont.eot");
+  src: url("../valo/fonts/open-sans/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../valo/fonts/open-sans/OpenSans-Regular-webfont.woff") format("woff"), url("../valo/fonts/open-sans/OpenSans-Regular-webfont.ttf") format("truetype");
   font-weight: 400;
   font-style: normal; }
 @font-face {
   font-family: 'Open Sans';
-  src: url("OpenSans-Semibold-webfont.eot");
-  src: url("OpenSans-Semibold-webfont.eot?#iefix") format("embedded-opentype"), url("OpenSans-Semibold-webfont.woff") format("woff"), url("OpenSans-Semibold-webfont.ttf") format("truetype");
+  src: url("../valo/fonts/open-sans/OpenSans-Semibold-webfont.eot");
+  src: url("../valo/fonts/open-sans/OpenSans-Semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../valo/fonts/open-sans/OpenSans-Semibold-webfont.woff") format("woff"), url("../valo/fonts/open-sans/OpenSans-Semibold-webfont.ttf") format("truetype");
   font-weight: 600;
   font-style: normal; }
 @font-face {
   font-family: "Source Sans Pro";
-  src: url("sourcesanspro-light.eot");
-  src: url("sourcesanspro-light.eot?#iefix") format("embedded-opentype"), url("sourcesanspro-light.woff") format("woff"), url("sourcesanspro-light.ttf") format("truetype");
+  src: url("../valo/fonts/source-sans-pro/sourcesanspro-light.eot");
+  src: url("../valo/fonts/source-sans-pro/sourcesanspro-light.eot?#iefix") format("embedded-opentype"), url("../valo/fonts/source-sans-pro/sourcesanspro-light.woff") format("woff"), url("../valo/fonts/source-sans-pro/sourcesanspro-light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal; }
 @font-face {
   font-family: "Source Sans Pro";
-  src: url("sourcesanspro-regular.eot");
-  src: url("sourcesanspro-regular.eot?#iefix") format("embedded-opentype"), url("sourcesanspro-regular.woff") format("woff"), url("sourcesanspro-regular.ttf") format("truetype");
+  src: url("../valo/fonts/source-sans-pro/sourcesanspro-regular.eot");
+  src: url("../valo/fonts/source-sans-pro/sourcesanspro-regular.eot?#iefix") format("embedded-opentype"), url("../valo/fonts/source-sans-pro/sourcesanspro-regular.woff") format("woff"), url("../valo/fonts/source-sans-pro/sourcesanspro-regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal; }
 @font-face {
   font-family: "Source Sans Pro";
-  src: url("sourcesanspro-semibold.eot");
-  src: url("sourcesanspro-semibold.eot?#iefix") format("embedded-opentype"), url("sourcesanspro-semibold.woff") format("woff"), url("sourcesanspro-semibold.ttf") format("truetype");
+  src: url("../valo/fonts/source-sans-pro/sourcesanspro-semibold.eot");
+  src: url("../valo/fonts/source-sans-pro/sourcesanspro-semibold.eot?#iefix") format("embedded-opentype"), url("../valo/fonts/source-sans-pro/sourcesanspro-semibold.woff") format("woff"), url("../valo/fonts/source-sans-pro/sourcesanspro-semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal; }
 @font-face {
   font-family: 'Roboto';
-  src: url("Roboto-Thin-webfont.eot");
-  src: url("Roboto-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Thin-webfont.woff") format("woff"), url("Roboto-Thin-webfont.ttf") format("truetype");
+  src: url("../valo/fonts/roboto/Roboto-Thin-webfont.eot");
+  src: url("../valo/fonts/roboto/Roboto-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../valo/fonts/roboto/Roboto-Thin-webfont.woff") format("woff"), url("../valo/fonts/roboto/Roboto-Thin-webfont.ttf") format("truetype");
   font-weight: 300;
   font-style: normal; }
 @font-face {
   font-family: 'Roboto';
-  src: url("Roboto-Regular-webfont.eot");
-  src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype");
+  src: url("../valo/fonts/roboto/Roboto-Regular-webfont.eot");
+  src: url("../valo/fonts/roboto/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../valo/fonts/roboto/Roboto-Regular-webfont.woff") format("woff"), url("../valo/fonts/roboto/Roboto-Regular-webfont.ttf") format("truetype");
   font-weight: 400;
   font-style: normal; }
 @font-face {
   font-family: 'Roboto';
-  src: url("Roboto-Medium-webfont.eot");
-  src: url("Roboto-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Medium-webfont.woff") format("woff"), url("Roboto-Medium-webfont.ttf") format("truetype");
+  src: url("../valo/fonts/roboto/Roboto-Medium-webfont.eot");
+  src: url("../valo/fonts/roboto/Roboto-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("../valo/fonts/roboto/Roboto-Medium-webfont.woff") format("woff"), url("../valo/fonts/roboto/Roboto-Medium-webfont.ttf") format("truetype");
   font-weight: 600;
   font-style: normal; }
 @font-face {
   font-family: 'Lato';
-  src: url("lato-light-webfont.eot");
-  src: url("lato-light-webfont.eot?#iefix") format("embedded-opentype"), url("lato-light-webfont.woff") format("woff"), url("lato-light-webfont.ttf") format("truetype");
+  src: url("../valo/fonts/lato/lato-light-webfont.eot");
+  src: url("../valo/fonts/lato/lato-light-webfont.eot?#iefix") format("embedded-opentype"), url("../valo/fonts/lato/lato-light-webfont.woff") format("woff"), url("../valo/fonts/lato/lato-light-webfont.ttf") format("truetype");
   font-weight: 300;
   font-style: normal; }
 @font-face {
   font-family: 'Lato';
-  src: url("lato-regular-webfont.eot");
-  src: url("lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("lato-regular-webfont.woff") format("woff"), url("lato-regular-webfont.ttf") format("truetype");
+  src: url("../valo/fonts/lato/lato-regular-webfont.eot");
+  src: url("../valo/fonts/lato/lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../valo/fonts/lato/lato-regular-webfont.woff") format("woff"), url("../valo/fonts/lato/lato-regular-webfont.ttf") format("truetype");
   font-weight: 400;
   font-style: normal; }
 @font-face {
   font-family: 'Lato';
-  src: url("lato-bold-webfont.eot");
-  src: url("lato-bold-webfont.eot?#iefix") format("embedded-opentype"), url("lato-bold-webfont.woff") format("woff"), url("lato-bold-webfont.ttf") format("truetype");
+  src: url("../valo/fonts/lato/lato-bold-webfont.eot");
+  src: url("../valo/fonts/lato/lato-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../valo/fonts/lato/lato-bold-webfont.woff") format("woff"), url("../valo/fonts/lato/lato-bold-webfont.ttf") format("truetype");
   font-weight: 700;
   font-style: normal; }
 @font-face {
   font-family: 'lora';
-  src: url("lora-regular-webfont.eot");
-  src: url("lora-regular-webfont.eot?#iefix") format("embedded-opentype"), url("lora-regular-webfont.woff") format("woff"), url("lora-regular-webfont.ttf") format("truetype");
+  src: url("../valo/fonts/lora/lora-regular-webfont.eot");
+  src: url("../valo/fonts/lora/lora-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../valo/fonts/lora/lora-regular-webfont.woff") format("woff"), url("../valo/fonts/lora/lora-regular-webfont.ttf") format("truetype");
   font-weight: 400;
   font-style: normal; }
 @font-face {
   font-family: 'lora';
-  src: url("lora-bold-webfont.eot");
-  src: url("lora-bold-webfont.eot?#iefix") format("embedded-opentype"), url("lora-bold-webfont.woff") format("woff"), url("lora-bold-webfont.ttf") format("truetype");
+  src: url("../valo/fonts/lora/lora-bold-webfont.eot");
+  src: url("../valo/fonts/lora/lora-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../valo/fonts/lora/lora-bold-webfont.woff") format("woff"), url("../valo/fonts/lora/lora-bold-webfont.ttf") format("truetype");
   font-weight: 700;
   font-style: normal; }
 @-webkit-keyframes v-rotate-360 {
@@ -2067,156 +2067,6 @@
  *
  * @group formlayout
  */
-/**
- *
- * @group table
- */
-/**
- *
- * @group table
- */
-/**
- *
- * @group table
- */
-/**
- *
- * @group table
- */
-/**
- *
- * @group table
- */
-/**
- *
- * @group table
- */
-/**
- *
- * @group table
- */
-/**
- *
- * @group table
- */
-/**
- *
- * @group table
- */
-/**
- *
- *
- * @param {string} $primary-stylename (v-table) - 
- *
- * @group table
- */
-/**
- *
- *
- * @param {color} $context ($v-background-color) - 
- *
- * @return {color} - 
- *
- * @group table
- */
-/**
- *
- *
- * @param {string} $primary-stylename (v-table) - 
- * @param {bool} $include-additional-styles - 
- *
- * @group table
- */
-/**
- *
- *
- *
- * @group table
- */
-/**
- *
- *
- *
- * @group table
- */
-/**
- *
- *
- *
- * @group table
- */
-/**
- *
- *
- *
- * @group table
- */
-/**
- *
- *
- * @param {string} $primary-stylename (v-table) - 
- *
- * @group table
- */
-/**
- *
- *
- * @param {string} $primary-stylename (v-table) - 
- *
- * @group table
- */
-/**
- *
- *
- * @param {string} $primary-stylename (v-table) - 
- *
- * @group table
- */
-/**
- *
- *
- * @param {string} $primary-stylename (v-table) - 
- *
- * @group table
- */
-/**
- *
- *
- * @param {string} $primary-stylename (v-table) - 
- *
- * @group table
- */
-/**
- *
- *
- * @param {string} $primary-stylename (v-grid) -
- *
- * @group grid
- */
-@-webkit-keyframes valo-grid-editor-footer-animate-in {
-  0% {
-    margin-top: -37px; } }
-@-moz-keyframes valo-grid-editor-footer-animate-in {
-  0% {
-    margin-top: -37px; } }
-@keyframes valo-grid-editor-footer-animate-in {
-  0% {
-    margin-top: -37px; } }
-@-webkit-keyframes valo-grid-editor-footer-animate-in-alt {
-  0% {
-    margin-bottom: -38px; }
-  100% {
-    margin-bottom: -1px; } }
-@-moz-keyframes valo-grid-editor-footer-animate-in-alt {
-  0% {
-    margin-bottom: -38px; }
-  100% {
-    margin-bottom: -1px; } }
-@keyframes valo-grid-editor-footer-animate-in-alt {
-  0% {
-    margin-bottom: -38px; }
-  100% {
-    margin-bottom: -1px; } }
 /**
  *
  *
@@ -3680,10 +3530,10 @@ div.v-layout.v-horizontal.v-widget {
   filter: alpha(opacity=0) ; }
 
 .rgb-gradient .v-colorpicker-gradient-background {
-  background: url(img/colorpicker/gradient2.png); }
+  background: url(../valo/components/img/colorpicker/gradient2.png); }
 
 .hsv-gradient .v-colorpicker-gradient-foreground {
-  background: url(img/colorpicker/gradient.png); }
+  background: url(../valo/components/img/colorpicker/gradient.png); }
 
 .v-colorpicker-gradient-higherbox:before {
   content: "";
@@ -3707,7 +3557,7 @@ div.v-layout.v-horizontal.v-widget {
   background-color: blue; }
 
 .v-colorpicker-popup .v-slider.hue-slider:before {
-  background: url(img/colorpicker/slider_hue_bg.png); }
+  background: url(../valo/components/img/colorpicker/slider_hue_bg.png); }
 
 .v-colorpicker-popup input.v-textfield-dark {
   color: #fff; }
@@ -3867,7 +3717,7 @@ div.v-layout.v-horizontal.v-widget {
     padding: 9px;
     margin-top: -24px;
     margin-left: -24px;
-    background: #fff url(img/spinner.gif) no-repeat 50%;
+    background: #fff url(../valo/shared/img/spinner.gif) no-repeat 50%;
     border-radius: 4px; }
 .admin-lte .v-loading-indicator {
   position: fixed !important;
@@ -3918,7 +3768,7 @@ div.v-layout.v-horizontal.v-widget {
   width: 28px !important;
   height: 28px;
   padding: 9px;
-  background: #fff url(img/spinner.gif) no-repeat 50%;
+  background: #fff url(../valo/shared/img/spinner.gif) no-repeat 50%;
   border-radius: 4px;
   top: 9px;
   right: 9px;
@@ -4129,7 +3979,7 @@ div.v-layout.v-horizontal.v-widget {
     .v-ie8 .admin-lte .v-reconnect-dialog .spinner, .v-ie9 .admin-lte .v-reconnect-dialog .spinner {
       border: none;
       border-radius: 4px;
-      background: #fff url(img/spinner.gif) no-repeat 50% 50%;
+      background: #fff url(../valo/shared/img/spinner.gif) no-repeat 50% 50%;
       background-size: 80%; }
     .v-ie8 .admin-lte .v-reconnect-dialog .spinner {
       min-width: 30px;
@@ -5845,609 +5695,6 @@ div.v-layout.v-horizontal.v-widget {
   left: auto; }
 .admin-lte .v-formlayout.light .v-checkbox {
   margin-left: 7px; }
-.admin-lte .v-grid {
-  position: relative; }
-.admin-lte .v-grid-scroller {
-  position: absolute;
-  z-index: 1;
-  outline: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-.admin-lte .v-grid-scroller-horizontal {
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow-y: hidden;
-  -ms-overflow-y: hidden; }
-.admin-lte .v-grid-scroller-vertical {
-  right: 0;
-  top: 0;
-  bottom: 0;
-  overflow-x: hidden;
-  -ms-overflow-x: hidden; }
-.admin-lte .v-grid-tablewrapper {
-  position: absolute;
-  overflow: hidden;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  z-index: 5; }
-.admin-lte .v-grid-tablewrapper > table {
-  border-spacing: 0;
-  table-layout: fixed;
-  width: inherit; }
-.admin-lte .v-grid-header-deco,
-.admin-lte .v-grid-footer-deco {
-  position: absolute;
-  right: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-.admin-lte .v-grid-horizontal-scrollbar-deco {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-.admin-lte .v-grid-header,
-.admin-lte .v-grid-body,
-.admin-lte .v-grid-footer {
-  position: absolute;
-  left: 0;
-  width: inherit;
-  z-index: 10; }
-.admin-lte .v-grid-header,
-.admin-lte .v-grid-header-deco {
-  top: 0; }
-.admin-lte .v-grid-footer,
-.admin-lte .v-grid-footer-deco {
-  bottom: 0; }
-.admin-lte .v-grid-body {
-  -ms-touch-action: none;
-  touch-action: none;
-  z-index: 0;
-  top: 0; }
-  .admin-lte .v-grid-body .v-grid-row {
-    position: absolute;
-    top: 0;
-    left: 0; }
-.admin-lte .v-grid-row {
-  display: block; }
-  .v-ie8 .admin-lte .v-grid-row, .v-ie9 .admin-lte .v-grid-row {
-    float: left;
-    clear: left;
-    margin-top: 0; }
-  .admin-lte .v-grid-row > td,
-  .admin-lte .v-grid-row > th {
-    background-color: white; }
-.admin-lte .v-grid-row {
-  width: inherit; }
-.admin-lte .v-grid-cell {
-  display: block;
-  float: left;
-  padding: 2px;
-  white-space: nowrap;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  overflow: hidden;
-  font-size: 16px; }
-.admin-lte .v-grid-cell.frozen {
-  position: relative;
-  z-index: 1; }
-.admin-lte .v-grid-spacer {
-  position: absolute;
-  display: block;
-  background-color: white; }
-  .admin-lte .v-grid-spacer > td {
-    width: 100%;
-    height: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-  .v-ie8 .admin-lte .v-grid-spacer, .v-ie9 .admin-lte .v-grid-spacer {
-    margin-top: 0; }
-.admin-lte .v-grid {
-  outline: none; }
-.admin-lte .v-grid-scroller-vertical,
-.admin-lte .v-grid-scroller-horizontal {
-  border: 1px solid #d4d4d4; }
-.admin-lte .v-grid-scroller-vertical {
-  border-left: none; }
-.admin-lte .v-grid-scroller-horizontal {
-  border-top: none; }
-.admin-lte .v-grid-tablewrapper {
-  border: 1px solid #d4d4d4; }
-.admin-lte .v-grid .header-drag-table {
-  border-spacing: 0;
-  position: relative;
-  table-layout: fixed;
-  width: inherit; }
-  .admin-lte .v-grid .header-drag-table .v-grid-header {
-    position: absolute; }
-    .admin-lte .v-grid .header-drag-table .v-grid-header > .v-grid-cell {
-      border: 1px solid #d4d4d4;
-      margin-top: -10px;
-      opacity: 0.9;
-      filter: alpha(opacity=90);
-      z-index: 30000; }
-    .admin-lte .v-grid .header-drag-table .v-grid-header > .v-grid-drop-marker {
-      background-color: #197de1;
-      position: absolute;
-      width: 3px; }
-.admin-lte .v-grid-sidebar.v-contextmenu {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border-radius: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #fafafa;
-  border: 1px solid #d4d4d4;
-  padding: 0;
-  z-index: 5; }
-  .admin-lte .v-grid-sidebar.v-contextmenu.v-grid-sidebar-popup {
-    right: auto; }
-  .admin-lte .v-grid-sidebar.v-contextmenu .v-grid-sidebar-button {
-    background: transparent;
-    border: none;
-    color: inherit;
-    cursor: pointer;
-    outline: none;
-    padding: 0 4px;
-    text-align: right;
-    line-height: 1; }
-    .admin-lte .v-grid-sidebar.v-contextmenu .v-grid-sidebar-button[disabled] {
-      cursor: default; }
-    .admin-lte .v-grid-sidebar.v-contextmenu .v-grid-sidebar-button::-moz-focus-inner {
-      border: 0; }
-    .admin-lte .v-grid-sidebar.v-contextmenu .v-grid-sidebar-button:after {
-      content: "\f0c9";
-      display: block;
-      font-family: ThemeIcons, sans-serif;
-      font-size: 14px; }
-  .admin-lte .v-grid-sidebar.v-contextmenu.closed {
-    border-radius: 0; }
-  .admin-lte .v-grid-sidebar.v-contextmenu.open .v-grid-sidebar-button {
-    width: 100%; }
-    .admin-lte .v-grid-sidebar.v-contextmenu.open .v-grid-sidebar-button:after {
-      content: "\f0c9";
-      font-size: 14px;
-      line-height: 1; }
-  .v-ie .admin-lte .v-grid-sidebar.v-contextmenu.open .v-grid-sidebar-button {
-    vertical-align: middle; }
-  .v-ie8 .admin-lte .v-grid-sidebar.v-contextmenu.open .v-grid-sidebar-button:after {
-    vertical-align: middle;
-    text-align: center;
-    display: inline; }
-  .admin-lte .v-grid-sidebar.v-contextmenu .v-grid-sidebar-content {
-    padding: 4px 0;
-    overflow-y: auto;
-    overflow-x: hidden; }
-    .admin-lte .v-grid-sidebar.v-contextmenu .v-grid-sidebar-content .gwt-MenuBar .gwt-MenuItem .column-hiding-toggle {
-      text-shadow: none; }
-.admin-lte .v-grid-cell {
-  background-color: white;
-  padding: 0 18px;
-  line-height: 37px;
-  text-overflow: ellipsis; }
-  .admin-lte .v-grid-cell > * {
-    line-height: 1.55;
-    vertical-align: middle; }
-  .admin-lte .v-grid-cell > div {
-    display: inline-block; }
-  .admin-lte .v-grid-cell.frozen {
-    -webkit-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
-    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
-    border-right: 1px solid #d4d4d4; }
-    .admin-lte .v-grid-cell.frozen + th,
-    .admin-lte .v-grid-cell.frozen + td {
-      border-left: none; }
-.admin-lte .v-grid-row > td,
-.admin-lte .v-grid-editor-cells > div {
-  border-left: 1px solid #d4d4d4;
-  border-bottom: 1px solid #d4d4d4; }
-  .admin-lte .v-grid-row > td:first-child,
-  .admin-lte .v-grid-editor-cells > div:first-child {
-    border-left: none; }
-.admin-lte .v-grid-editor-cells.frozen > div {
-  -webkit-box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
-  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.1);
-  border-right: 1px solid #d4d4d4;
-  border-left: none; }
-.admin-lte .v-grid-row-stripe > td {
-  background-color: whitesmoke; }
-.admin-lte .v-grid-row-selected > td {
-  background: #197de1; }
-.admin-lte .v-grid-header th {
-  position: relative;
-  background-color: #fafafa;
-  font-size: 14px;
-  font-weight: inherit;
-  border-left: 1px solid #d4d4d4;
-  border-bottom: 1px solid #d4d4d4;
-  text-align: left; }
-  .admin-lte .v-grid-header th:first-child {
-    border-left: none; }
-.admin-lte .v-grid-header .sort-asc,
-.admin-lte .v-grid-header .sort-desc {
-  padding-right: 35px; }
-  .admin-lte .v-grid-header .sort-asc:after,
-  .admin-lte .v-grid-header .sort-desc:after {
-    font-family: ThemeIcons, sans-serif;
-    content: "" " " attr(sort-order);
-    position: absolute;
-    right: 18px;
-    font-size: 12px; }
-.admin-lte .v-grid-header .sort-desc:after {
-  content: "" " " attr(sort-order); }
-.admin-lte .v-grid-column-resize-handle {
-  position: absolute;
-  width: 36px;
-  right: -18px;
-  top: 0px;
-  bottom: 0px;
-  cursor: col-resize;
-  z-index: 10;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-.admin-lte .v-grid-column-resize-simple-indicator {
-  position: absolute;
-  width: 3px;
-  top: 0px;
-  left: 18px;
-  z-index: 9001;
-  background: #fff;
-  box-shadow: 0px 0px 5px #000;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-.admin-lte .v-grid-footer td {
-  background-color: #fafafa;
-  font-size: 14px;
-  font-weight: inherit;
-  border-left: 1px solid #d4d4d4;
-  border-top: 1px solid #d4d4d4;
-  border-bottom: none; }
-  .admin-lte .v-grid-footer td:first-child {
-    border-left: none; }
-.admin-lte .v-grid-header .v-grid-cell,
-.admin-lte .v-grid-footer .v-grid-cell {
-  overflow: visible; }
-.admin-lte .v-grid-column-header-content,
-.admin-lte .v-grid-column-footer-content {
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  line-height: 37px;
-  vertical-align: baseline; }
-.admin-lte .v-grid-header-deco {
-  border-top: 1px solid #d4d4d4;
-  border-right: 1px solid #d4d4d4;
-  background-color: #fafafa; }
-.admin-lte .v-grid-footer-deco {
-  border-bottom: 1px solid #d4d4d4;
-  border-right: 1px solid #d4d4d4;
-  background-color: #fafafa; }
-.admin-lte .v-grid-horizontal-scrollbar-deco {
-  background-color: #fafafa;
-  border: 1px solid #d4d4d4;
-  border-top: none; }
-.admin-lte .v-grid-cell-focused {
-  position: relative; }
-  .admin-lte .v-grid-cell-focused:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border: 2px solid #197de1;
-    display: none;
-    pointer-events: none; }
-  .ie8 .admin-lte .v-grid-cell-focused:before, .ie9 .admin-lte .v-grid-cell-focused:before, .ie10 .admin-lte .v-grid-cell-focused:before {
-    content: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==); }
-.admin-lte .v-grid:focus .v-grid-cell-focused:before {
-  display: block; }
-.admin-lte .v-grid.v-disabled:focus .v-grid-cell-focused:before {
-  display: none; }
-.admin-lte .v-grid-editor {
-  position: absolute;
-  z-index: 20;
-  overflow: hidden;
-  left: 0;
-  right: 0;
-  border: 1px solid #d4d4d4;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  margin-top: -1px;
-  -webkit-box-shadow: 0 0 9px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 9px rgba(0, 0, 0, 0.2); }
-  .admin-lte .v-grid-editor.unbuffered .v-grid-editor-footer {
-    width: 100%; }
-.admin-lte .v-grid-editor-cells {
-  position: relative;
-  white-space: nowrap; }
-  .admin-lte .v-grid-editor-cells.frozen {
-    z-index: 2; }
-  .admin-lte .v-grid-editor-cells > div {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    vertical-align: middle;
-    background: white; }
-    .admin-lte .v-grid-editor-cells > div:first-child {
-      border-left: none; }
-    .admin-lte .v-grid-editor-cells > div > * {
-      vertical-align: middle;
-      display: inline-block; }
-    .admin-lte .v-grid-editor-cells > div .v-filterselect {
-      padding-left: 0; }
-    .admin-lte .v-grid-editor-cells > div input[type="text"],
-    .admin-lte .v-grid-editor-cells > div input[type="text"].v-filterselect-input,
-    .admin-lte .v-grid-editor-cells > div input[type="password"] {
-      padding-left: 18px; }
-    .admin-lte .v-grid-editor-cells > div input[type="text"]:not(.v-filterselect-input),
-    .admin-lte .v-grid-editor-cells > div input[type="password"] {
-      padding-right: 9px; }
-    .admin-lte .v-grid-editor-cells > div input[type="checkbox"] {
-      margin-left: 18px; }
-    .admin-lte .v-grid-editor-cells > div .v-textfield,
-    .admin-lte .v-grid-editor-cells > div .v-datefield,
-    .admin-lte .v-grid-editor-cells > div .v-filterselect {
-      min-width: 100%;
-      max-width: 100%;
-      min-height: 100%;
-      max-height: 100%; }
-    .v-ie8 .admin-lte .v-grid-editor-cells > div .v-datefield-button {
-      margin-left: -37px; }
-    .v-ie8 .admin-lte .v-grid-editor-cells > div .v-filterselect-button {
-      margin-left: -25px; }
-    .admin-lte .v-grid-editor-cells > div .v-select,
-    .admin-lte .v-grid-editor-cells > div .v-select-select {
-      min-width: 100%;
-      max-width: 100%; }
-    .admin-lte .v-grid-editor-cells > div.not-editable.v-grid-cell {
-      float: none; }
-  .admin-lte .v-grid-editor-cells .error::before {
-    position: absolute;
-    display: block;
-    height: 0;
-    width: 0;
-    content: "";
-    border-top: 5px solid red;
-    border-right: 5px solid transparent; }
-  .admin-lte .v-grid-editor-cells .error,
-  .admin-lte .v-grid-editor-cells .error > input {
-    background-color: #fee; }
-.admin-lte .v-grid-editor-footer {
-  display: table;
-  height: 37px;
-  border-top: 1px solid #d4d4d4;
-  margin-top: -1px;
-  background: white;
-  padding: 0 5px; }
-  .admin-lte .v-grid-editor-footer + .v-grid-editor-cells > div {
-    border-bottom: none;
-    border-top: 1px solid #d4d4d4; }
-  .admin-lte .v-grid-editor-footer:first-child {
-    border-top: none;
-    margin-top: 0;
-    border-bottom: 1px solid #d4d4d4;
-    margin-bottom: -1px; }
-.admin-lte .v-grid-editor-message,
-.admin-lte .v-grid-editor-buttons {
-  display: table-cell;
-  white-space: nowrap;
-  vertical-align: middle; }
-.admin-lte .v-grid-editor-message {
-  width: 100%;
-  position: relative; }
-  .admin-lte .v-grid-editor-message > div {
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 37px;
-    top: 0; }
-.admin-lte .v-grid-editor-save {
-  margin-right: 4px; }
-.admin-lte .v-grid-spacer {
-  padding-left: 1px; }
-.admin-lte .v-grid-spacer > td {
-  display: block;
-  padding: 0;
-  background-color: white;
-  border-top: 1px solid #efefef;
-  border-bottom: 1px solid #d4d4d4; }
-.admin-lte .v-grid-spacer.stripe > td {
-  background-color: whitesmoke;
-  border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #d4d4d4; }
-.admin-lte .v-grid-spacer-deco-container {
-  border-top: 1px solid transparent;
-  position: relative;
-  top: 0;
-  z-index: 5; }
-.admin-lte .v-grid-spacer-deco {
-  top: 0;
-  left: 0;
-  width: 2px;
-  background-color: #197de1;
-  position: absolute;
-  height: 100%;
-  pointer-events: none; }
-  .ie8 .admin-lte .v-grid-spacer-deco:before, .ie9 .admin-lte .v-grid-spacer-deco:before, .ie10 .admin-lte .v-grid-spacer-deco:before {
-    content: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==); }
-.admin-lte .v-grid-cell > .v-progressbar {
-  width: 100%; }
-.admin-lte .v-grid {
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
-  background-color: #fafafa; }
-  .admin-lte .v-grid.v-disabled {
-    opacity: 0.5;
-    filter: alpha(opacity=50) ; }
-.admin-lte .v-grid-header .v-grid-cell {
-  background-color: #fafafa;
-  background-image: -webkit-linear-gradient(top, #fafafa 2%, #f0f0f0 98%);
-  background-image: linear-gradient(to bottom,#fafafa 2%, #f0f0f0 98%);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05); }
-.admin-lte .v-grid-header .v-grid-cell.dragged {
-  opacity: 0.5;
-  filter: alpha(opacity=50) ;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -moz-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out; }
-.admin-lte .v-grid-header .v-grid-cell.dragged-column-header {
-  margin-top: -19px; }
-.admin-lte .v-grid-footer .v-grid-cell {
-  background-color: #fafafa;
-  background-image: -webkit-linear-gradient(top, #fafafa 2%, #f0f0f0 98%);
-  background-image: linear-gradient(to bottom,#fafafa 2%, #f0f0f0 98%);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05); }
-.admin-lte .v-grid-header-deco {
-  background-color: #fafafa;
-  background-image: -webkit-linear-gradient(top, #fafafa 2%, #f0f0f0 98%);
-  background-image: linear-gradient(to bottom,#fafafa 2%, #f0f0f0 98%); }
-.admin-lte .v-grid-footer-deco,
-.admin-lte .v-grid-horizontal-scrollbar-deco {
-  background-color: #fafafa;
-  background-image: -webkit-linear-gradient(top, #fafafa 2%, #f0f0f0 98%);
-  background-image: linear-gradient(to bottom,#fafafa 2%, #f0f0f0 98%); }
-.admin-lte .v-grid-row-selected > .v-grid-cell {
-  background-color: #197de1;
-  background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed6 98%);
-  background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed6 98%);
-  color: #c8dbed;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
-  border-color: #1d69b4; }
-.admin-lte .v-grid-row-selected > .v-grid-cell-focused:before {
-  border-color: #71b0ef; }
-.admin-lte .v-grid-editor {
-  -webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-  box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-  border-color: #197de1; }
-.admin-lte .v-grid-editor-footer {
-  font-size: 14px;
-  padding: 0 6px;
-  background: #fafafa;
-  -webkit-animation: valo-grid-editor-footer-animate-in 200ms 120ms backwards;
-  -moz-animation: valo-grid-editor-footer-animate-in 200ms 120ms backwards;
-  animation: valo-grid-editor-footer-animate-in 200ms 120ms backwards; }
-.admin-lte .v-grid-editor-footer:first-child {
-  -webkit-animation: valo-grid-editor-footer-animate-in-alt 200ms 120ms backwards;
-  -moz-animation: valo-grid-editor-footer-animate-in-alt 200ms 120ms backwards;
-  animation: valo-grid-editor-footer-animate-in-alt 200ms 120ms backwards; }
-.admin-lte .v-grid-editor-cells {
-  z-index: 1; }
-.admin-lte .v-grid-editor-cells > div:before {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle; }
-.admin-lte .v-grid-editor-cells > div.not-editable.v-grid-cell {
-  float: none; }
-.admin-lte .v-grid-editor-cells > div .error::before {
-  border-top: 9px solid #ed473b;
-  border-right: 9px solid transparent; }
-.admin-lte .v-grid-editor-cells > div .error,
-.admin-lte .v-grid-editor-cells > div .error > input {
-  background-color: #fffbfb; }
-.admin-lte .v-grid-editor-cells > div .v-textfield,
-.admin-lte .v-grid-editor-cells > div .v-textfield-focus,
-.admin-lte .v-grid-editor-cells > div .v-datefield,
-.admin-lte .v-grid-editor-cells > div .v-datefield .v-textfield-focus,
-.admin-lte .v-grid-editor-cells > div .v-filterselect-input,
-.admin-lte .v-grid-editor-cells > div .v-filterselect-input:focus {
-  border: none;
-  border-radius: 0;
-  background: transparent;
-  -webkit-box-shadow: inset 0 1px 0 #f3f3f3;
-  box-shadow: inset 0 1px 0 #f3f3f3; }
-.admin-lte .v-grid-editor-cells > div input[type="text"].v-datefield-textfield {
-  padding-left: 44.4px; }
-.v-ie8 .admin-lte .v-grid-editor-cells > div .v-datefield-button {
-  margin-left: 0px; }
-.v-ie8 .admin-lte .v-grid-editor-cells > div .v-filterselect-button {
-  margin-left: 0px; }
-.admin-lte .v-grid-editor-cells > div .v-textfield-focus,
-.admin-lte .v-grid-editor-cells > div .v-datefield .v-textfield-focus,
-.admin-lte .v-grid-editor-cells > div .v-filterselect-input:focus {
-  position: relative; }
-.admin-lte .v-grid-editor-cells > div .v-select {
-  padding-left: 9px;
-  padding-right: 9px; }
-.admin-lte .v-grid-editor-cells > div .v-checkbox {
-  margin: 0 9px 0 18px; }
-  .admin-lte .v-grid-editor-cells > div .v-checkbox > input[type="checkbox"] {
-    margin-left: 0; }
-  .admin-lte .v-grid-editor-cells > div .v-checkbox > label {
-    white-space: nowrap; }
-.admin-lte .v-grid-editor-message > div:before {
-  display: inline-block;
-  color: #ed473b;
-  font-weight: 600;
-  width: 19px;
-  text-align: center;
-  content: "!"; }
-.admin-lte .v-grid-editor-save,
-.admin-lte .v-grid-editor-cancel {
-  cursor: pointer;
-  color: #197de1;
-  text-decoration: underline;
-  font-weight: inherit;
-  -webkit-transition: color 140ms;
-  -moz-transition: color 140ms;
-  transition: color 140ms;
-  font-weight: 400;
-  text-decoration: none;
-  border: none;
-  background: transparent;
-  padding: 6px 6px;
-  margin: 0;
-  outline: none; }
-  .admin-lte .v-grid-editor-save:hover,
-  .admin-lte .v-grid-editor-cancel:hover {
-    color: #4396ea; }
-  .admin-lte .v-grid-editor-save.v-disabled,
-  .admin-lte .v-grid-editor-cancel.v-disabled {
-    opacity: 0.5;
-    filter: alpha(opacity=50) ; }
-.admin-lte .v-grid-spacer {
-  margin-top: -1px; }
-.admin-lte .v-grid-sidebar.v-contextmenu.open .v-grid-sidebar-content {
-  margin: 0 0 2px;
-  padding: 4px 4px 2px;
-  overflow-y: auto;
-  overflow-x: hidden; }
-.admin-lte .v-grid-sidebar.v-contextmenu.closed {
-  background-color: #fafafa;
-  background-image: -webkit-linear-gradient(top, #fafafa 2%, #f0f0f0 98%);
-  background-image: linear-gradient(to bottom,#fafafa 2%, #f0f0f0 98%); }
-.admin-lte .v-grid-scroller::-webkit-scrollbar {
-  border: none; }
-.admin-lte .v-grid-scroller::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  border: 4px solid transparent;
-  background: rgba(0, 0, 0, 0.3);
-  -webkit-background-clip: content-box;
-  background-clip: content-box; }
-.admin-lte .v-grid-scroller-vertical::-webkit-scrollbar-thumb {
-  min-height: 30px; }
-.admin-lte .v-grid-scroller-horizontal::-webkit-scrollbar-thumb {
-  min-width: 30px; }
 .admin-lte .v-textfield {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -10392,7 +9639,7 @@ div.v-layout.v-horizontal.v-widget {
   .v-ie8 .admin-lte .v-progressbar-indeterminate, .v-ie9 .admin-lte .v-progressbar-indeterminate {
     border: none;
     border-radius: 4px;
-    background: #fff url(img/spinner.gif) no-repeat 50% 50%;
+    background: #fff url(../valo/shared/img/spinner.gif) no-repeat 50% 50%;
     background-size: 80%; }
   .v-ie8 .admin-lte .v-progressbar-indeterminate {
     min-width: 30px;
@@ -10463,7 +9710,7 @@ div.v-layout.v-horizontal.v-widget {
   .v-ie8 .admin-lte .v-progressindicator-indeterminate, .v-ie9 .admin-lte .v-progressindicator-indeterminate {
     border: none;
     border-radius: 4px;
-    background: #fff url(img/spinner.gif) no-repeat 50% 50%;
+    background: #fff url(../valo/shared/img/spinner.gif) no-repeat 50% 50%;
     background-size: 80%; }
   .v-ie8 .admin-lte .v-progressindicator-indeterminate {
     min-width: 30px;
@@ -10819,7 +10066,7 @@ div.v-layout.v-horizontal.v-widget {
   .v-ie8 .admin-lte .v-tabsheet-deco, .v-ie9 .admin-lte .v-tabsheet-deco {
     border: none;
     border-radius: 4px;
-    background: #fff url(img/spinner.gif) no-repeat 50% 50%;
+    background: #fff url(../valo/shared/img/spinner.gif) no-repeat 50% 50%;
     background-size: 80%; }
   .v-ie8 .admin-lte .v-tabsheet-deco {
     min-width: 30px;
@@ -11675,7 +10922,7 @@ div.v-layout.v-horizontal.v-widget {
   .v-ie8 .admin-lte .v-label-spinner, .v-ie9 .admin-lte .v-label-spinner {
     border: none;
     border-radius: 4px;
-    background: #fff url(img/spinner.gif) no-repeat 50% 50%;
+    background: #fff url(../valo/shared/img/spinner.gif) no-repeat 50% 50%;
     background-size: 80%; }
   .v-ie8 .admin-lte .v-label-spinner {
     min-width: 30px;
@@ -11853,7 +11100,7 @@ div.v-layout.v-horizontal.v-widget {
   .v-ie8 .admin-lte .v-popupview-loading, .v-ie9 .admin-lte .v-popupview-loading {
     border: none;
     border-radius: 4px;
-    background: #fff url(img/spinner.gif) no-repeat 50% 50%;
+    background: #fff url(../valo/shared/img/spinner.gif) no-repeat 50% 50%;
     background-size: 80%; }
   .v-ie8 .admin-lte .v-popupview-loading {
     min-width: 30px;
@@ -12687,6 +11934,7 @@ div.v-layout.v-horizontal.v-widget {
   overflow: hidden; }
 
 .test {
-  color: red; }
+  color: red !important;
+  margin-bottom: 0.5em; }
 
 /*# sourceMappingURL=styles.css.map */
