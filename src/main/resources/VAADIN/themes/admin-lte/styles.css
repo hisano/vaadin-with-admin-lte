@@ -3701,6 +3701,9 @@ div.v-layout.v-horizontal.v-widget {
  * the variation specified by global variables. Should not be included multiple times 
  * per compilation.
  */
+.v-generated-body {
+  background-color: #d2d6de !important; }
+
 .test {
   color: red !important;
   margin-bottom: 0.5em; }

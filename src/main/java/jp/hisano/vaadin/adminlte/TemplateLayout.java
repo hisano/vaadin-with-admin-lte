@@ -45,6 +45,7 @@ public class TemplateLayout extends CustomLayout {
 			_designContexts.add(designContext);
 			addComponent(designContext.getRootComponent(), vaadinElement.attr("location"));
 		}
+		setSizeFull();
 	}
 
 	private List<Element> replaceVaadinElements(Document templateDocument) {

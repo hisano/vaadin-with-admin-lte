@@ -7,6 +7,10 @@ $v-relative-paths: false;
 //  @include valo;
 //}
 
+.v-generated-body {
+	background-color: #d2d6de !important;
+}
+
 .test {
 	color: red !important;
 	margin-bottom: 0.5em;
