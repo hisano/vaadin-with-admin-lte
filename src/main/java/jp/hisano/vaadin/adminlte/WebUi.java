@@ -8,26 +8,19 @@ import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
+import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
 
 @Theme("admin-lte")
 public class WebUi extends UI {
 	@Override
 	protected void init(VaadinRequest request) {
-		setContent(new TemplateLayout("index", new Context()));
+		TemplateLayout content = new TemplateLayout("index", new Context());
 
-		// VerticalLayout layout = new VerticalLayout();
-		// layout.setMargin(true);
-		// layout.setSpacing(true);
-		//
-		// TextField text = new TextField("Name");
-		// layout.addComponent(text);
-		//
-		// Button button = new Button("Hello");
-		// layout.addComponent(button);
-		//
-		// setContent(layout);
-		// setContent(new TextField("Name"));
+		TextField name = (TextField) content.getComponent("name");
+		name.setValue("Hisano");
+
+		setContent(content);
 	}
 
 	@WebServlet(value = "/*", asyncSupported = true)
