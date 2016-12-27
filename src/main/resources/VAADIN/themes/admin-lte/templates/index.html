@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../styles.css">
+</head>
+<body xmlns:th="http://www.thymeleaf.org">
+	<div class="test" th:utext="#{home.welcome}">Welcome!</div>
+	<vaadin-vertical-layout>
+		<vaadin-text-field _id="name" caption="Name" th:caption="#{form.name}"></vaadin-text-field>
+		<vaadin-text-field _id="address" caption="Address" th:caption="#{form.address}"></vaadin-text-field>
+	</vaadin-vertical-layout>
+	<div class="test">Footer</div>
+</body>
