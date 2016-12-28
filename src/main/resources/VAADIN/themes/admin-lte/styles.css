@@ -620,11 +620,6 @@
  *
  * @group style
  */
-@import url(bootstrap/css/bootstrap.css);
-@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css";
-@import "https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css";
-@import url(dist/css/AdminLTE.css);
-@import url(plugins/iCheck/square/blue.css);
 @-webkit-keyframes valo-animate-in-fade {
   0% {
     opacity: 0; } }
