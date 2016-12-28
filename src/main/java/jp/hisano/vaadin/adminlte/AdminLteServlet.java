@@ -28,6 +28,7 @@ public final class AdminLteServlet extends VaadinServlet {
 						response.getDocument().head().append("<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css\"/>");
 						response.getDocument().head().append("<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css\"/>");
 						response.getDocument().head().append("<link rel=\"stylesheet\" href=\"" + path + "/dist/css/AdminLTE.css\"/>");
+						response.getDocument().head().append("<link rel=\"stylesheet\" href=\"" + path + "/dist/css/skins/_all-skins.min.css\"/>");
 						response.getDocument().head().append("<link rel=\"stylesheet\" href=\"" + path + "/plugins/iCheck/square/blue.css\"/>");
 
 						response.getDocument().head().append("<script src=\"" + path + "/plugins/jQuery/jquery-2.2.3.min.js\"/>");
