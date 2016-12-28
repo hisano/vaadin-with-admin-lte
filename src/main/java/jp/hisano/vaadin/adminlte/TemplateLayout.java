@@ -3,7 +3,9 @@ package jp.hisano.vaadin.adminlte;
 import java.io.ByteArrayInputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -16,6 +18,7 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import com.google.common.collect.Lists;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.CustomLayout;
+import com.vaadin.ui.JavaScript;
 import com.vaadin.ui.declarative.Design;
 import com.vaadin.ui.declarative.DesignContext;
 
@@ -31,11 +34,13 @@ public class TemplateLayout extends CustomLayout {
 		_templateEngine.setTemplateResolver(templateResolver);
 	}
 
+	private final Set<String> _bodyClassNames;
 	private final List<DesignContext> _designContexts = Lists.newLinkedList();
 
 	public TemplateLayout(String templateName, IContext context) {
 		String template = _templateEngine.process(templateName, context);
 		Document templateDocument = Jsoup.parse(template);
+		_bodyClassNames = templateDocument.body().classNames();
 		List<Element> vaadinElements = replaceVaadinElements(templateDocument);
 		template = templateDocument.html();
 
@@ -46,6 +51,12 @@ public class TemplateLayout extends CustomLayout {
 			addComponent(designContext.getRootComponent(), vaadinElement.attr("location"));
 		}
 		setSizeFull();
+	}
+
+	@Override
+	public void attach() {
+		super.attach();
+		JavaScript.eval(_bodyClassNames.stream().map(className -> "$('body').addClass('" + className + "');").collect(Collectors.joining()));
 	}
 
 	private List<Element> replaceVaadinElements(Document templateDocument) {

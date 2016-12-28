@@ -129,13 +129,13 @@ body {
 .fixed.layout-boxed .wrapper {
   max-width: 100%;
 }
-div.hold-transition .content-wrapper,
-div.hold-transition .right-side,
-div.hold-transition .main-footer,
-div.hold-transition .main-sidebar,
-div.hold-transition .left-side,
-div.hold-transition .main-header .navbar,
-div.hold-transition .main-header .logo {
+body.hold-transition .content-wrapper,
+body.hold-transition .right-side,
+body.hold-transition .main-footer,
+body.hold-transition .main-sidebar,
+body.hold-transition .left-side,
+body.hold-transition .main-header .navbar,
+body.hold-transition .main-header .logo {
   /* Fix for IE */
   -webkit-transition: none;
   -o-transition: none;
