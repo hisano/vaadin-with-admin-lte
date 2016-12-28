@@ -3822,10 +3822,6 @@ div.v-layout.v-horizontal.v-widget {
     outline: none;
     -webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
     box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5); }
-.valo button {
-  font: inherit;
-  font-weight: 400;
-  line-height: 1.55; }
 .valo .v-disabled {
   cursor: default !important; }
 .valo .v-drag-element {

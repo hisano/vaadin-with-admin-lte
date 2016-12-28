@@ -25,7 +25,7 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="hold-transition skin-blue sidebar-mini" xmlns:th="http://www.thymeleaf.org">
+<body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
@@ -914,7 +914,7 @@
             <!-- /.box-header -->
             <div class="box-body">
               <!-- Conversations are loaded here -->
-              <div class="direct-chat-messages" id="direct-chat-messages-id">
+              <div class="direct-chat-messages">
                 <!-- Message. Default to the left -->
                 <div class="direct-chat-msg">
                   <div class="direct-chat-info clearfix">
@@ -929,16 +929,6 @@
                   <!-- /.direct-chat-text -->
                 </div>
                 <!-- /.direct-chat-msg -->
-                <div class="direct-chat-msg" id="direct-chat-message-id" style="display: none">
-                  <div class="direct-chat-info clearfix">
-                    <span class="direct-chat-name pull-left">Alexander Pierce</span>
-                    <span class="direct-chat-timestamp pull-right" th:text="${direct_chat_message_time}">23 Jan 2:00 pm</span>
-                  </div>
-                  <img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="Message User Image">
-                  <div class="direct-chat-text" th:text="${direct_chat_message_text}">
-                    Is this template really for free? That's unbelievable!
-                  </div>
-                </div>
 
                 <!-- Message to the right -->
                 <div class="direct-chat-msg right">
@@ -982,28 +972,14 @@
             </div>
             <!-- /.box-body -->
             <div class="box-footer">
-<!--/*-->
               <form action="#" method="post">
-<!--*/-->
                 <div class="input-group">
-<!--/*-->
                   <input type="text" name="message" placeholder="Type Message ..." class="form-control">
-<!--*/-->
-<!--/*/
-                  <vaadin-text-field _id="message" style-name="form-control" input-prompt="Type Message ..."></vaadin-text-field>
-/*/-->
                       <span class="input-group-btn">
-<!--/*-->
                         <button type="submit" class="btn btn-primary btn-flat">Send</button>
-<!--*/-->
-<!--/*/
-                        <vaadin-button _id="send" style-name="btn btn-primary btn-flat">Send</vaadin-button>
-/*/-->
                       </span>
                 </div>
-<!--/*-->
               </form>
-<!--*/-->
             </div>
             <!-- /.box-footer-->
           </div>
