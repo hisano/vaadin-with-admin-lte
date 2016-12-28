@@ -23,17 +23,28 @@ public final class AdminLteServlet extends VaadinServlet {
 				event.getSession().addBootstrapListener(new BootstrapListener() {
 					@Override
 					public void modifyBootstrapPage(BootstrapPageResponse response) {
-						String path = "VAADIN/themes/admin-lte";
-						response.getDocument().head().append("<link rel=\"stylesheet\" href=\"" + path + "/bootstrap/css/bootstrap.min.css\"/>");
-						response.getDocument().head().append("<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css\"/>");
-						response.getDocument().head().append("<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css\"/>");
-						response.getDocument().head().append("<link rel=\"stylesheet\" href=\"" + path + "/dist/css/AdminLTE.css\"/>");
-						response.getDocument().head().append("<link rel=\"stylesheet\" href=\"" + path + "/dist/css/skins/_all-skins.min.css\"/>");
-						response.getDocument().head().append("<link rel=\"stylesheet\" href=\"" + path + "/plugins/iCheck/square/blue.css\"/>");
+						addStyleSheetInThemeDirectory(response, "bootstrap/css/bootstrap.min.css");
+						addStyleSheet(response, "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css");
+						addStyleSheet(response, "https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css");
+						addStyleSheetInThemeDirectory(response, "dist/css/AdminLTE.css");
+						addStyleSheetInThemeDirectory(response, "dist/css/skins/_all-skins.min.css");
+						addStyleSheetInThemeDirectory(response, "plugins/iCheck/square/blue.css");
 
-						response.getDocument().head().append("<script src=\"" + path + "/plugins/jQuery/jquery-2.2.3.min.js\"/>");
-						response.getDocument().head().append("<script src=\"" + path + "/bootstrap/js/bootstrap.min.js\"/>");
-						response.getDocument().head().append("<script src=\"" + path + "/plugins/iCheck/icheck.min.js\"/>");
+						addScriptInThemeDirectory(response, "plugins/jQuery/jquery-2.2.3.min.js");
+						addScriptInThemeDirectory(response, "bootstrap/js/bootstrap.min.js");
+						addScriptInThemeDirectory(response, "plugins/iCheck/icheck.min.js");
+					}
+
+					private void addScriptInThemeDirectory(BootstrapPageResponse response, String relativePath) {
+						response.getDocument().head().append("<script src=\"" + Settings.getThemeDirectoryPath() + relativePath + "\"/>");
+					}
+
+					private void addStyleSheetInThemeDirectory(BootstrapPageResponse response, String relativePath) {
+						addStyleSheet(response, Settings.getThemeDirectoryPath() + relativePath);
+					}
+
+					private void addStyleSheet(BootstrapPageResponse response, String path) {
+						response.getDocument().head().append("<link rel=\"stylesheet\" href=\"" + path + "\"/>");
 					}
 
 					@Override

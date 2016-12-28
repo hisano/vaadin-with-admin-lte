@@ -5,7 +5,7 @@ import com.vaadin.navigator.Navigator;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.UI;
 
-@Theme("admin-lte")
+@Theme(Settings.THEME_NAME)
 public final class AdminLteUI extends UI {
 	@Override
 	protected void init(VaadinRequest request) {

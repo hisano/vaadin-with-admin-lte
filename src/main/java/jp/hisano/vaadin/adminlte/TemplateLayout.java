@@ -22,12 +22,12 @@ import com.vaadin.ui.JavaScript;
 import com.vaadin.ui.declarative.Design;
 import com.vaadin.ui.declarative.DesignContext;
 
-public class TemplateLayout extends CustomLayout {
+public final class TemplateLayout extends CustomLayout {
 	private static TemplateEngine _templateEngine;
 
 	static {
 		ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
-		templateResolver.setPrefix("/VAADIN/themes/admin-lte/templates/");
+		templateResolver.setPrefix(Settings.getThemeDirectoryPath() + "templates/");
 		templateResolver.setSuffix(".html");
 
 		_templateEngine = new TemplateEngine();
@@ -39,6 +39,8 @@ public class TemplateLayout extends CustomLayout {
 	private final List<DesignContext> _designContexts = Lists.newLinkedList();
 
 	public TemplateLayout(String templateName, IContext context) {
+		setSizeFull();
+
 		String template = _templateEngine.process(templateName, context);
 		Document templateDocument = Jsoup.parse(template);
 		_bodyClassNames = templateDocument.body().classNames();
@@ -55,7 +57,6 @@ public class TemplateLayout extends CustomLayout {
 			_designContexts.add(designContext);
 			addComponent(designContext.getRootComponent(), vaadinElement.attr("location"));
 		}
-		setSizeFull();
 	}
 
 	@Override

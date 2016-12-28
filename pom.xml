@@ -48,6 +48,13 @@
 			<artifactId>thymeleaf</artifactId>
 			<version>3.0.2.RELEASE</version>
 		</dependency>
+
+		<!-- 挙動調査用 -->
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin-client</artifactId>
+			<version>7.7.6</version>
+		</dependency>
 	</dependencies>
 
 	<build>
