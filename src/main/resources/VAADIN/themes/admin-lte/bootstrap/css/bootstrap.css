@@ -3009,9 +3009,9 @@ select[multiple].input-lg {
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
-  text-align: center !important;
+  text-align: center;
   white-space: nowrap;
-  vertical-align: middle !important;
+  vertical-align: middle;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
   cursor: pointer;
