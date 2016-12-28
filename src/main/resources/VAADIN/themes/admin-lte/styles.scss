@@ -1,11 +1,12 @@
 $v-relative-paths: false;
+$valo-global-included: true;
 
 @import "../valo/valo";
 @import "admin-lte";
 
-//.admin-lte {
-//  @include valo;
-//}
+.admin-lte {
+  @include valo-common;
+}
 
 .v-generated-body {
 	background-color: #d2d6de !important;
