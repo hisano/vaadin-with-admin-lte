@@ -25,8 +25,9 @@ import com.vaadin.ui.declarative.Design;
 import com.vaadin.ui.declarative.DesignContext;
 
 public final class TemplateLayout extends CustomLayout {
-	private static TemplateEngine _templateEngine;
+	private static final String TEMPLATE_DIRECTORY_NAME = "templates";
 
+	private static final TemplateEngine _templateEngine;
 	static {
 		ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
 		templateResolver.setPrefix(getTemplateDirectoryPath());
@@ -37,7 +38,7 @@ public final class TemplateLayout extends CustomLayout {
 	}
 
 	private static String getTemplateDirectoryPath() {
-		return Settings.getThemeDirectoryPath() + "templates/";
+		return Settings.getThemeDirectoryPath() + TEMPLATE_DIRECTORY_NAME + "/";
 	}
 
 	private final String _templateName;
@@ -63,6 +64,7 @@ public final class TemplateLayout extends CustomLayout {
 			}
 		}).collect(Collectors.toList());
 		List<Element> vaadinElements = replaceVaadinElements(templateDocument);
+		convertImagePaths(templateDocument);
 		template = templateDocument.html();
 
 		setSizeFull();
@@ -71,6 +73,18 @@ public final class TemplateLayout extends CustomLayout {
 			DesignContext designContext = Design.read(new ByteArrayInputStream(vaadinElement.toString().getBytes(StandardCharsets.UTF_8)), null);
 			_designContexts.add(designContext);
 			addComponent(designContext.getRootComponent(), vaadinElement.attr("location"));
+		}
+	}
+
+	private void convertImagePaths(Document templateDocument) {
+		for (Element element: templateDocument.getElementsByTag("img")) {
+			if (element.hasAttr("src")) {
+				String path = element.attr("src");
+				if (path.startsWith("https:") || path.startsWith("http")) {
+					continue;
+				}
+				element.attr("src", "../" + TEMPLATE_DIRECTORY_NAME + "/" + (_templateName.contains("/")? StringUtils.substringBeforeLast(_templateName, "/") + "/": "") + path);
+			}
 		}
 	}
 
