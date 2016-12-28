@@ -30,15 +30,11 @@ public final class TemplateLayout extends CustomLayout {
 	private static final TemplateEngine _templateEngine;
 	static {
 		ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
-		templateResolver.setPrefix(getTemplateDirectoryPath());
+		templateResolver.setPrefix(Settings.getThemeDirectoryPath() + TEMPLATE_DIRECTORY_NAME + "/");
 		templateResolver.setSuffix(".html");
 
 		_templateEngine = new TemplateEngine();
 		_templateEngine.setTemplateResolver(templateResolver);
-	}
-
-	private static String getTemplateDirectoryPath() {
-		return Settings.getThemeDirectoryPath() + TEMPLATE_DIRECTORY_NAME + "/";
 	}
 
 	private final String _templateName;
@@ -58,7 +54,7 @@ public final class TemplateLayout extends CustomLayout {
 		_scripts = templateDocument.body().getElementsByTag("script").stream().map(element -> {
 			element.remove();
 			if (element.hasAttr("src")) {
-				return "$('<script src=\"" + appendThemeDirectory(element.attr("src")) + "\"></script>').appendTo('body').remove();";
+				return "$('<script src=\"" + appendThemeDirectory(Settings.getThemeDirectoryPath(), element.attr("src")) + "\"></script>').appendTo('body').remove();";
 			} else {
 				return element.data();
 			}
@@ -79,11 +75,7 @@ public final class TemplateLayout extends CustomLayout {
 	private void convertImagePaths(Document templateDocument) {
 		for (Element element: templateDocument.getElementsByTag("img")) {
 			if (element.hasAttr("src")) {
-				String path = element.attr("src");
-				if (path.startsWith("https:") || path.startsWith("http")) {
-					continue;
-				}
-				element.attr("src", "../" + TEMPLATE_DIRECTORY_NAME + "/" + (_templateName.contains("/")? StringUtils.substringBeforeLast(_templateName, "/") + "/": "") + path);
+				element.attr("src", appendThemeDirectory("../", element.attr("src")));
 			}
 		}
 	}
@@ -96,11 +88,11 @@ public final class TemplateLayout extends CustomLayout {
 		return elements.get(0).text();
 	}
 
-	private String appendThemeDirectory(String path) {
+	private String appendThemeDirectory(String pathPrefix, String path) {
 		if (path.startsWith("https:") || path.startsWith("http")) {
 			return path;
 		}
-		return getTemplateDirectoryPath() + (_templateName.contains("/")? StringUtils.substringBeforeLast(_templateName, "/") + "/": "")  + path;
+		return pathPrefix + TEMPLATE_DIRECTORY_NAME + "/" + (_templateName.contains("/")? StringUtils.substringBeforeLast(_templateName, "/") + "/": "")  + path;
 	}
 
 	@Override
