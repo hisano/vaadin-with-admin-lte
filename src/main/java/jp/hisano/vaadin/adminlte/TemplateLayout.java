@@ -37,7 +37,28 @@ public final class TemplateLayout extends CustomLayout {
 		_templateEngine.setTemplateResolver(templateResolver);
 	}
 
-	private final String _templateName;
+	static Element getTemplateElement(String templateName, IContext context, String id) {
+		Document templateDocument = Jsoup.parse(_templateEngine.process(templateName, context));
+		convertImagePaths(Settings.getThemeDirectoryPath(), templateName, templateDocument);
+		Element element = templateDocument.getElementById(id);
+		element.removeAttr("id");
+		return element;
+	}
+
+	private static void convertImagePaths(String pathPrefix, String templateName, Document templateDocument) {
+		for (Element element: templateDocument.getElementsByTag("img")) {
+			if (element.hasAttr("src")) {
+				element.attr("src", appendThemeDirectory(pathPrefix, templateName, element.attr("src")));
+			}
+		}
+	}
+
+	private static String appendThemeDirectory(String pathPrefix, String templateName, String path) {
+		if (path.startsWith("https:") || path.startsWith("http")) {
+			return path;
+		}
+		return pathPrefix + TEMPLATE_DIRECTORY_NAME + "/" + (templateName.contains("/")? StringUtils.substringBeforeLast(templateName, "/") + "/": "")  + path;
+	}
 
 	private final String _title;
 	private final Set<String> _bodyClassNames;
@@ -46,37 +67,26 @@ public final class TemplateLayout extends CustomLayout {
 	private final List<DesignContext> _designContexts = Lists.newLinkedList();
 
 	public TemplateLayout(String templateName, IContext context) {
-		_templateName = templateName;
-		String template = _templateEngine.process(templateName, context);
-		Document templateDocument = Jsoup.parse(template);
+		Document templateDocument = Jsoup.parse(_templateEngine.process(templateName, context));
+		convertImagePaths("../", templateName, templateDocument);
 		_title = parseTitle(templateDocument);
 		_bodyClassNames = templateDocument.body().classNames();
 		_scripts = templateDocument.body().getElementsByTag("script").stream().map(element -> {
 			element.remove();
 			if (element.hasAttr("src")) {
-				return "$('<script src=\"" + appendThemeDirectory(Settings.getThemeDirectoryPath(), element.attr("src")) + "\"></script>').appendTo('body').remove();";
+				return "$('<script src=\"" + appendThemeDirectory(Settings.getThemeDirectoryPath(), templateName, element.attr("src")) + "\"></script>').appendTo('body').remove();";
 			} else {
 				return element.data();
 			}
 		}).collect(Collectors.toList());
 		List<Element> vaadinElements = replaceVaadinElements(templateDocument);
-		convertImagePaths(templateDocument);
-		template = templateDocument.html();
 
 		setSizeFull();
-		setTemplateContents(template);
+		setTemplateContents(templateDocument.html());
 		for (Element vaadinElement : vaadinElements) {
 			DesignContext designContext = Design.read(new ByteArrayInputStream(vaadinElement.toString().getBytes(StandardCharsets.UTF_8)), null);
 			_designContexts.add(designContext);
 			addComponent(designContext.getRootComponent(), vaadinElement.attr("location"));
-		}
-	}
-
-	private void convertImagePaths(Document templateDocument) {
-		for (Element element: templateDocument.getElementsByTag("img")) {
-			if (element.hasAttr("src")) {
-				element.attr("src", appendThemeDirectory("../", element.attr("src")));
-			}
 		}
 	}
 
@@ -86,13 +96,6 @@ public final class TemplateLayout extends CustomLayout {
 			return null;
 		}
 		return elements.get(0).text();
-	}
-
-	private String appendThemeDirectory(String pathPrefix, String path) {
-		if (path.startsWith("https:") || path.startsWith("http")) {
-			return path;
-		}
-		return pathPrefix + TEMPLATE_DIRECTORY_NAME + "/" + (_templateName.contains("/")? StringUtils.substringBeforeLast(_templateName, "/") + "/": "")  + path;
 	}
 
 	@Override

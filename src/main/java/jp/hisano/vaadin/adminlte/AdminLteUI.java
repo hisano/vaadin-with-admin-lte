@@ -11,8 +11,9 @@ public final class AdminLteUI extends UI {
 	protected void init(VaadinRequest request) {
 		Navigator navigator = new Navigator(this, this);
 
-		navigator.addView("", new ChartJsView());
+		navigator.addView("", new WidgetsView());
 
+		navigator.addView(WidgetsView.VIEW_NAME, new WidgetsView());
 		navigator.addView(ChartJsView.VIEW_NAME, new ChartJsView());
 		navigator.addView(InvoiceView.VIEW_NAME, new InvoiceView());
 		navigator.addView(LoginView.VIEW_NAME, new LoginView());
