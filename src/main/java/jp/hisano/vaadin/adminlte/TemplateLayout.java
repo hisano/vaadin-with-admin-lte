@@ -7,6 +7,7 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -27,36 +28,52 @@ public final class TemplateLayout extends CustomLayout {
 
 	static {
 		ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
-		templateResolver.setPrefix(Settings.getThemeDirectoryPath() + "templates/");
+		templateResolver.setPrefix(getTemplateDirectoryPath());
 		templateResolver.setSuffix(".html");
 
 		_templateEngine = new TemplateEngine();
 		_templateEngine.setTemplateResolver(templateResolver);
 	}
 
+	private static String getTemplateDirectoryPath() {
+		return Settings.getThemeDirectoryPath() + "templates/";
+	}
+
+	private final String _templateName;
 	private final Set<String> _bodyClassNames;
 	private final List<String> _scripts;
 	private final List<DesignContext> _designContexts = Lists.newLinkedList();
 
 	public TemplateLayout(String templateName, IContext context) {
-		setSizeFull();
-
+		_templateName = templateName;
 		String template = _templateEngine.process(templateName, context);
 		Document templateDocument = Jsoup.parse(template);
 		_bodyClassNames = templateDocument.body().classNames();
 		_scripts = templateDocument.body().getElementsByTag("script").stream().map(element -> {
 			element.remove();
-			return element.data();
+			if (element.hasAttr("src")) {
+				return "$('<script src=\"" + appendThemeDirectory(element.attr("src")) + "\"></script>').appendTo('body').remove();";
+			} else {
+				return element.data();
+			}
 		}).collect(Collectors.toList());
 		List<Element> vaadinElements = replaceVaadinElements(templateDocument);
 		template = templateDocument.html();
 
+		setSizeFull();
 		setTemplateContents(template);
 		for (Element vaadinElement : vaadinElements) {
 			DesignContext designContext = Design.read(new ByteArrayInputStream(vaadinElement.toString().getBytes(StandardCharsets.UTF_8)), null);
 			_designContexts.add(designContext);
 			addComponent(designContext.getRootComponent(), vaadinElement.attr("location"));
 		}
+	}
+
+	private String appendThemeDirectory(String path) {
+		if (path.startsWith("https:") || path.startsWith("http")) {
+			return path;
+		}
+		return getTemplateDirectoryPath() + (_templateName.contains("/")? StringUtils.substringBeforeLast(_templateName, "/") + "/": "")  + path;
 	}
 
 	@Override
