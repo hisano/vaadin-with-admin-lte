@@ -15,7 +15,6 @@ import com.vaadin.server.SessionInitListener;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.Button;
-import com.vaadin.ui.JavaScript;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
@@ -27,16 +26,6 @@ public class WebUi extends UI {
 		TemplateLayout content = new TemplateLayout("login", new Context());
 
 		setContent(content);
-
-		JavaScript.getCurrent().execute("" +
-			"  $(function () {\n" + 
-			"    $('input').iCheck({\n" + 
-			"      checkboxClass: 'icheckbox_square-blue',\n" + 
-			"      radioClass: 'iradio_square-blue',\n" + 
-			"      increaseArea: '20%' // optional\n" + 
-			"    });\n" + 
-			"  });"
-		);
 
 		TextField email = (TextField)content.getComponent("email");
 		email.setValue("hisano@gmail.com");

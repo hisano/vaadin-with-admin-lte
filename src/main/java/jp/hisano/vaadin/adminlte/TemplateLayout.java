@@ -35,12 +35,17 @@ public class TemplateLayout extends CustomLayout {
 	}
 
 	private final Set<String> _bodyClassNames;
+	private final List<String> _scripts;
 	private final List<DesignContext> _designContexts = Lists.newLinkedList();
 
 	public TemplateLayout(String templateName, IContext context) {
 		String template = _templateEngine.process(templateName, context);
 		Document templateDocument = Jsoup.parse(template);
 		_bodyClassNames = templateDocument.body().classNames();
+		_scripts = templateDocument.body().getElementsByTag("script").stream().map(element -> {
+			element.remove();
+			return element.data();
+		}).collect(Collectors.toList());
 		List<Element> vaadinElements = replaceVaadinElements(templateDocument);
 		template = templateDocument.html();
 
@@ -56,7 +61,7 @@ public class TemplateLayout extends CustomLayout {
 	@Override
 	public void attach() {
 		super.attach();
-		JavaScript.eval(_bodyClassNames.stream().map(className -> "$('body').addClass('" + className + "');").collect(Collectors.joining()));
+		JavaScript.eval(_bodyClassNames.stream().map(className -> "$('body').addClass('" + className + "');").collect(Collectors.joining()) + _scripts.stream().collect(Collectors.joining()));
 	}
 
 	private List<Element> replaceVaadinElements(Document templateDocument) {
