@@ -3697,11 +3697,6 @@ div.v-layout.v-horizontal.v-widget {
  * the variation specified by global variables. Should not be included multiple times 
  * per compilation.
  */
-.valo.v-app, .valo.v-app-loading {
-  font: 300 16px/1.55 "Open Sans", sans-serif;
-  color: #464646;
-  background-color: #fafafa;
-  cursor: default; }
 .valo .v-app-loading {
   width: 100%;
   height: 100%;
@@ -3831,19 +3826,6 @@ div.v-layout.v-horizontal.v-widget {
   font: inherit;
   font-weight: 400;
   line-height: 1.55; }
-.valo a {
-  cursor: pointer;
-  color: #197de1;
-  text-decoration: underline;
-  font-weight: inherit;
-  -webkit-transition: color 140ms;
-  -moz-transition: color 140ms;
-  transition: color 140ms; }
-  .valo a:hover {
-    color: #4396ea; }
-  .valo a.v-disabled {
-    opacity: 0.5;
-    filter: alpha(opacity=50) ; }
 .valo .v-disabled {
   cursor: default !important; }
 .valo .v-drag-element {

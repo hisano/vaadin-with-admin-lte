@@ -234,7 +234,7 @@ $valo-shared-pathPrefix: null;
   //} @else {
     &.v-app,
     &.v-app-loading {
-      @include valo-app-style;
+//      @include valo-app-style;
     }
   //}
 
@@ -361,9 +361,9 @@ $valo-shared-pathPrefix: null;
     line-height: $v-line-height;
   }
 
-  a {
-    @include valo-link-style;
-  }
+  //a {
+  //  @include valo-link-style;
+  //}
 
   .v-disabled {
     cursor: default !important;
