@@ -12,6 +12,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.parser.Tag;
+import org.jsoup.select.Elements;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.IContext;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
@@ -40,14 +41,18 @@ public final class TemplateLayout extends CustomLayout {
 	}
 
 	private final String _templateName;
+
+	private final String _title;
 	private final Set<String> _bodyClassNames;
 	private final List<String> _scripts;
+
 	private final List<DesignContext> _designContexts = Lists.newLinkedList();
 
 	public TemplateLayout(String templateName, IContext context) {
 		_templateName = templateName;
 		String template = _templateEngine.process(templateName, context);
 		Document templateDocument = Jsoup.parse(template);
+		_title = parseTitle(templateDocument);
 		_bodyClassNames = templateDocument.body().classNames();
 		_scripts = templateDocument.body().getElementsByTag("script").stream().map(element -> {
 			element.remove();
@@ -69,6 +74,14 @@ public final class TemplateLayout extends CustomLayout {
 		}
 	}
 
+	private String parseTitle(Document templateDocument) {
+		Elements elements = templateDocument.getElementsByTag("title");
+		if (elements.isEmpty()) {
+			return null;
+		}
+		return elements.get(0).text();
+	}
+
 	private String appendThemeDirectory(String path) {
 		if (path.startsWith("https:") || path.startsWith("http")) {
 			return path;
@@ -79,7 +92,15 @@ public final class TemplateLayout extends CustomLayout {
 	@Override
 	public void attach() {
 		super.attach();
-		JavaScript.eval(_bodyClassNames.stream().map(className -> "$('body').addClass('" + className + "');").collect(Collectors.joining()) + _scripts.stream().collect(Collectors.joining()));
+
+		StringBuilder allScripts = new StringBuilder();
+		if (_title != null) {
+			allScripts.append("document.title = '" + _title +"';\n");
+		}
+		allScripts.append(_bodyClassNames.stream().map(className -> "$('body').addClass('" + className + "');\n").collect(Collectors.joining()));
+		allScripts.append(_scripts.stream().map(script -> script + "\n") .collect(Collectors.joining()));
+
+		JavaScript.eval("" + allScripts);
 	}
 
 	private List<Element> replaceVaadinElements(Document templateDocument) {
