@@ -42,6 +42,7 @@ final class WidgetsView extends CustomComponent implements View {
 			String escapedTextElement = textElement.html().replace("\n", "").replace("'", "\\'");
 
 			JavaScript.eval("$('#direct-chat-messages-id').append('" + escapedTextElement + "');");
+			// language=JavaScript
 			JavaScript.eval("$('#direct-chat-messages-id').scrollTop($('#direct-chat-messages-id')[0].scrollHeight);");
 		});
 	}
