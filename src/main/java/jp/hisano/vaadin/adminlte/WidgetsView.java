@@ -41,9 +41,11 @@ final class WidgetsView extends CustomComponent implements View {
 			textElement.removeAttr("style");
 			String escapedTextElement = textElement.html().replace("\n", "").replace("'", "\\'");
 
-			JavaScript.eval("$('#direct-chat-messages-id').append('" + escapedTextElement + "');");
 			// language=JavaScript
-			JavaScript.eval("$('#direct-chat-messages-id').scrollTop($('#direct-chat-messages-id')[0].scrollHeight);");
+			String script = "$('#direct-chat-messages-id').append('<div>DUMMY</div>');\n" +
+					"$('#direct-chat-messages-id').scrollTop($('#direct-chat-messages-id')[0].scrollHeight);\n";
+			script = script.replace("<div>DUMMY</div>", escapedTextElement);
+			JavaScript.eval(script);
 		});
 	}
 }
