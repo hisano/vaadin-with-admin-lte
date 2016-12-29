@@ -29,6 +29,12 @@ public final class AdminLteServlet extends VaadinServlet {
 						addStyleSheetInThemeDirectory(response, "dist/css/AdminLTE.css");
 						addStyleSheetInThemeDirectory(response, "dist/css/skins/_all-skins.min.css");
 						addStyleSheetInThemeDirectory(response, "plugins/iCheck/square/blue.css");
+						addStyleSheetInThemeDirectory(response, "plugins/iCheck/flat/blue.css");
+						addStyleSheetInThemeDirectory(response, "plugins/morris/morris.css");
+						addStyleSheetInThemeDirectory(response, "plugins/jvectormap/jquery-jvectormap-1.2.2.css");
+						addStyleSheetInThemeDirectory(response, "plugins/datepicker/datepicker3.css");
+						addStyleSheetInThemeDirectory(response, "plugins/daterangepicker/daterangepicker.css");
+						addStyleSheetInThemeDirectory(response, "plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css");
 
 						addScriptInThemeDirectory(response, "plugins/jQuery/jquery-2.2.3.min.js");
 						addScriptInThemeDirectory(response, "bootstrap/js/bootstrap.min.js");
