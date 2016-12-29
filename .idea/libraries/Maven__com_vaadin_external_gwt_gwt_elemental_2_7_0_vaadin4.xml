@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.vaadin.external.gwt:gwt-elemental:2.7.0.vaadin4">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/vaadin/external/gwt/gwt-elemental/2.7.0.vaadin4/gwt-elemental-2.7.0.vaadin4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/vaadin/external/gwt/gwt-elemental/2.7.0.vaadin4/gwt-elemental-2.7.0.vaadin4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/vaadin/external/gwt/gwt-elemental/2.7.0.vaadin4/gwt-elemental-2.7.0.vaadin4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

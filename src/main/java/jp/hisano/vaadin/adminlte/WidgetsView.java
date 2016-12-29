@@ -33,6 +33,7 @@ final class WidgetsView extends CustomComponent implements View {
 			message.focus();
 
 			Context context = new Context();
+			context.setVariable("direct_chat_message_name", "Anonymous");
 			context.setVariable("direct_chat_message_time", LocalDateTime.now().format(DateTimeFormatter.ofPattern("d MMM h:mm a").withLocale(Locale.US)).replace("AM", "am").replace("PM", "pm"));
 			context.setVariable("direct_chat_message_text", text);
 
