@@ -1,6 +1,7 @@
 package jp.hisano.vaadin.adminlte;
 
 import java.io.ByteArrayInputStream;
+import java.lang.management.ManagementFactory;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Set;
@@ -32,9 +33,16 @@ public final class TemplateLayout extends CustomLayout {
 		ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
 		templateResolver.setPrefix(Settings.getThemeDirectoryPath() + TEMPLATE_DIRECTORY_NAME + "/");
 		templateResolver.setSuffix(".html");
+		if (isDebuggerAttached()) {
+			templateResolver.setCacheable(false);
+		}
 
 		_templateEngine = new TemplateEngine();
 		_templateEngine.setTemplateResolver(templateResolver);
+	}
+
+	private static boolean isDebuggerAttached() {
+		return ManagementFactory.getRuntimeMXBean().getInputArguments().toString().indexOf("-agentlib:jdwp") > 0;
 	}
 
 	static Element getTemplateElement(String templateName, IContext context, String id) {
