@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -630,19 +630,19 @@
           <div class="table-responsive">
             <table class="table">
               <tr>
-                <th style="width:50%">Subtotal:</th>
+                <th style="width:50%" th:text="#{amount.due.subtotal}">Subtotal:</th>
                 <td>$250.30</td>
               </tr>
               <tr>
-                <th>Tax (9.3%)</th>
+                <th th:text="#{amount.due.tax}">Tax (9.3%)</th>
                 <td>$10.34</td>
               </tr>
               <tr>
-                <th>Shipping:</th>
+                <th th:text="#{amount.due.shipping}">Shipping:</th>
                 <td>$5.80</td>
               </tr>
               <tr>
-                <th>Total:</th>
+                <th th:text="#{amount.due.total}">Total:</th>
                 <td>
 <!--/*-->
                   $265.24
