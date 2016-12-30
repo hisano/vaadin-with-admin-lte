@@ -75,6 +75,10 @@ public final class TemplateLayout extends CustomLayout {
 	private final List<DesignContext> _designContexts = Lists.newLinkedList();
 
 	public TemplateLayout(String templateName, IContext context) {
+		this(templateName, null, context);
+	}
+
+	public TemplateLayout(String templateName, String elementId, IContext context) {
 		Document templateDocument = Jsoup.parse(_templateEngine.process(templateName, context));
 		convertImagePaths("../", templateName, templateDocument);
 		_title = parseTitle(templateDocument);
@@ -90,7 +94,7 @@ public final class TemplateLayout extends CustomLayout {
 		List<Element> vaadinElements = replaceVaadinElements(templateDocument);
 
 		setSizeFull();
-		setTemplateContents(templateDocument.html());
+		setTemplateContents(elementId == null? templateDocument.html(): templateDocument.getElementById(elementId).html());
 		for (Element vaadinElement : vaadinElements) {
 			DesignContext designContext = Design.read(new ByteArrayInputStream(vaadinElement.toString().getBytes(StandardCharsets.UTF_8)), null);
 			_designContexts.add(designContext);

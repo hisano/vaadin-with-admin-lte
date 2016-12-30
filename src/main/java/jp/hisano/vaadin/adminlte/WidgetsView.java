@@ -21,7 +21,7 @@ final class WidgetsView extends CustomComponent implements View {
 	public void enter(ViewChangeEvent event) {
 		setSizeFull();
 
-		TemplateLayout content = new TemplateLayout("widgets", new Context());
+		TemplateLayout content = new TemplateLayout("widgets", "contentArea", new Context());
 
 		setCompositionRoot(content);
 

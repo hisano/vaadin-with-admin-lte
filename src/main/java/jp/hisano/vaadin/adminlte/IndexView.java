@@ -12,7 +12,7 @@ final class IndexView extends CustomComponent implements View {
 	public void enter(ViewChangeEvent event) {
 		setSizeFull();
 
-		TemplateLayout content = new TemplateLayout("../index", new Context());
+		TemplateLayout content = new TemplateLayout("../index", "contentArea", new Context());
 
 		setCompositionRoot(content);
 	}
