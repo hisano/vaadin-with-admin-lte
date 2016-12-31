@@ -36,6 +36,7 @@ public final class AdminLteServlet extends VaadinServlet {
 						addStyleSheetInThemeDirectory(response, "plugins/daterangepicker/daterangepicker.css");
 						addStyleSheetInThemeDirectory(response, "plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css");
 
+						addScriptInThemeDirectory(response, "jsloader.js");
 						addScriptInThemeDirectory(response, "plugins/jQuery/jquery-2.2.3.min.js");
 						addScriptInThemeDirectory(response, "bootstrap/js/bootstrap.min.js");
 						addScriptInThemeDirectory(response, "plugins/iCheck/icheck.min.js");

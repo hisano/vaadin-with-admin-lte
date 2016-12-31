@@ -67,7 +67,7 @@ public final class TemplateLayout extends CustomLayout {
 
 	private final String _title;
 	private final Set<String> _bodyClassNames;
-	private final List<String> _scripts;
+	private final List<String> _appendedScripts;
 
 	private final List<DesignContext> _designContexts = Lists.newLinkedList();
 
@@ -80,12 +80,12 @@ public final class TemplateLayout extends CustomLayout {
 		convertImagePaths("../", templatePath, templateDocument);
 		_title = parseTitle(templateDocument);
 		_bodyClassNames = templateDocument.body().classNames();
-		_scripts = templateDocument.body().getElementsByTag("script").stream().map(element -> {
+		_appendedScripts = templateDocument.body().getElementsByTag("script").stream().map(element -> {
 			element.remove();
 			if (element.hasAttr("src")) {
-				return "$('<script src=\"" + calculatePath(Settings.getThemeDirectoryPath(), templatePath, element.attr("src")) + "\"></script>').appendTo('body').remove();";
+				return ".next('" + calculatePath(Settings.getThemeDirectoryPath(), templatePath, element.attr("src")) + "')";
 			} else {
-				return element.data();
+				return ".next(function() {\n" + element.data() + "\n})";
 			}
 		}).collect(Collectors.toList());
 		List<Element> vaadinElements = replaceVaadinElements(templateDocument);
@@ -116,7 +116,10 @@ public final class TemplateLayout extends CustomLayout {
 			allScripts.append("document.title = '" + _title +"';\n");
 		}
 		allScripts.append(_bodyClassNames.stream().map(className -> "$('body').addClass('" + className + "');\n").collect(Collectors.joining()));
-		allScripts.append(_scripts.stream().map(script -> script + "\n") .collect(Collectors.joining()));
+
+		allScripts.append("new JSLoader()\n");
+		allScripts.append(_appendedScripts.stream().map(script -> script + "\n") .collect(Collectors.joining()));
+		allScripts.append(".start();\n");
 
 		JavaScript.eval("" + allScripts);
 	}
