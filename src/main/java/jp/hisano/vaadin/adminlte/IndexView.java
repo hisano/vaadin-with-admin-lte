@@ -6,13 +6,11 @@ import com.vaadin.ui.CustomComponent;
 import org.thymeleaf.context.Context;
 
 final class IndexView extends CustomComponent implements View {
-	static final String VIEW_NAME = "index";
-
 	@Override
 	public void enter(ViewChangeEvent event) {
 		setSizeFull();
 
-		TemplateLayout content = new TemplateLayout("../index", "contentArea", new Context());
+		TemplateLayout content = new TemplateLayout("index.html", "contentArea", new Context());
 
 		setCompositionRoot(content);
 	}

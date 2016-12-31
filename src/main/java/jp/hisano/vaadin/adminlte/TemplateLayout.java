@@ -26,13 +26,10 @@ import com.vaadin.ui.declarative.Design;
 import com.vaadin.ui.declarative.DesignContext;
 
 public final class TemplateLayout extends CustomLayout {
-	private static final String TEMPLATE_DIRECTORY_NAME = "templates";
-
 	private static final TemplateEngine _templateEngine;
 	static {
 		ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
-		templateResolver.setPrefix(Settings.getThemeDirectoryPath() + TEMPLATE_DIRECTORY_NAME + "/");
-		templateResolver.setSuffix(".html");
+		templateResolver.setPrefix(Settings.getThemeDirectoryPath());
 		if (isDebuggerAttached()) {
 			templateResolver.setCacheable(false);
 		}
@@ -45,27 +42,27 @@ public final class TemplateLayout extends CustomLayout {
 		return ManagementFactory.getRuntimeMXBean().getInputArguments().toString().indexOf("-agentlib:jdwp") > 0;
 	}
 
-	static Element getTemplateElement(String templateName, IContext context, String id) {
-		Document templateDocument = Jsoup.parse(_templateEngine.process(templateName, context));
-		convertImagePaths(Settings.getThemeDirectoryPath(), templateName, templateDocument);
+	static Element getTemplateElement(String templatePath, IContext context, String id) {
+		Document templateDocument = Jsoup.parse(_templateEngine.process(templatePath, context));
+		convertImagePaths(Settings.getThemeDirectoryPath(), templatePath, templateDocument);
 		Element element = templateDocument.getElementById(id);
 		element.removeAttr("id");
 		return element;
 	}
 
-	private static void convertImagePaths(String pathPrefix, String templateName, Document templateDocument) {
+	private static void convertImagePaths(String pathPrefix, String templatePath, Document templateDocument) {
 		for (Element element: templateDocument.getElementsByTag("img")) {
 			if (element.hasAttr("src")) {
-				element.attr("src", appendThemeDirectory(pathPrefix, templateName, element.attr("src")));
+				element.attr("src", calculatePath(pathPrefix, templatePath, element.attr("src")));
 			}
 		}
 	}
 
-	private static String appendThemeDirectory(String pathPrefix, String templateName, String path) {
-		if (path.startsWith("https:") || path.startsWith("http")) {
+	private static String calculatePath(String pathPrefix, String templatePath, String path) {
+		if (path.startsWith("https:") || path.startsWith("http:")) {
 			return path;
 		}
-		return pathPrefix + TEMPLATE_DIRECTORY_NAME + "/" + (templateName.contains("/")? StringUtils.substringBeforeLast(templateName, "/") + "/": "")  + path;
+		return pathPrefix + (templatePath.contains("/")? StringUtils.substringBeforeLast(templatePath, "/") + "/": "")  + path;
 	}
 
 	private final String _title;
@@ -78,15 +75,15 @@ public final class TemplateLayout extends CustomLayout {
 		this(templateName, null, context);
 	}
 
-	public TemplateLayout(String templateName, String elementId, IContext context) {
-		Document templateDocument = Jsoup.parse(_templateEngine.process(templateName, context));
-		convertImagePaths("../", templateName, templateDocument);
+	public TemplateLayout(String templatePath, String elementId, IContext context) {
+		Document templateDocument = Jsoup.parse(_templateEngine.process(templatePath, context));
+		convertImagePaths("../", templatePath, templateDocument);
 		_title = parseTitle(templateDocument);
 		_bodyClassNames = templateDocument.body().classNames();
 		_scripts = templateDocument.body().getElementsByTag("script").stream().map(element -> {
 			element.remove();
 			if (element.hasAttr("src")) {
-				return "$('<script src=\"" + appendThemeDirectory(Settings.getThemeDirectoryPath(), templateName, element.attr("src")) + "\"></script>').appendTo('body').remove();";
+				return "$('<script src=\"" + calculatePath(Settings.getThemeDirectoryPath(), templatePath, element.attr("src")) + "\"></script>').appendTo('body').remove();";
 			} else {
 				return element.data();
 			}

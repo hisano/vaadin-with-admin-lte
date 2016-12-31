@@ -14,7 +14,7 @@ final class InvoiceView extends CustomComponent implements View {
 	public void enter(ViewChangeEvent event) {
 		setSizeFull();
 
-		TemplateLayout content = new TemplateLayout("example/invoice", "contentArea", new Context());
+		TemplateLayout content = new TemplateLayout("templates/example/invoice.html", "contentArea", new Context());
 
 		setCompositionRoot(content);
 

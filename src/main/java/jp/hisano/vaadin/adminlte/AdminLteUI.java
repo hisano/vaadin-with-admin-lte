@@ -12,7 +12,7 @@ public final class AdminLteUI extends UI {
 	protected void init(VaadinRequest request) {
 		switch (getPage().getLocation().getPath()) {
 			case "/login":
-				TemplateLayout content = new TemplateLayout("example/login", new Context());
+				TemplateLayout content = new TemplateLayout("templates/example/login.html", new Context());
 
 				setContent(content);
 
@@ -47,6 +47,6 @@ public final class AdminLteUI extends UI {
 	private TemplateLayout createFrameView() {
 		Context context = new Context();
 		context.setVariable("useAsFrame", true);
-		return new TemplateLayout("../index", context);
+		return new TemplateLayout("index.html", context);
 	}
 }

@@ -13,7 +13,7 @@ final class ChartJsView extends CustomComponent implements View {
 	public void enter(ViewChangeEvent event) {
 		setSizeFull();
 
-		TemplateLayout content = new TemplateLayout("charts/chartjs", "contentArea", new Context());
+		TemplateLayout content = new TemplateLayout("templates/charts/chartjs.html", "contentArea", new Context());
 
 		setCompositionRoot(content);
 	}
