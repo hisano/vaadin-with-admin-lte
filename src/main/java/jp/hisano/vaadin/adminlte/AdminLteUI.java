@@ -24,10 +24,16 @@ public final class AdminLteUI extends UI {
 			default:
 				Navigator navigator = new Navigator(this, createContentArea());
 
-				navigator.addView("", new IndexView());
+				navigator.addView("", new TemplateView("index.html"));
+				navigator.addView("index2", new TemplateView("index2.html"));
 
 				navigator.addView(WidgetsView.VIEW_NAME, new WidgetsView());
-				navigator.addView(ChartJsView.VIEW_NAME, new ChartJsView());
+
+				navigator.addView("chartjs", new TemplateView("pages/charts/chartjs.html"));
+				navigator.addView("morris", new TemplateView("pages/charts/morris.html"));
+				navigator.addView("flot", new TemplateView("pages/charts/flot.html"));
+				navigator.addView("inline", new TemplateView("pages/charts/inline.html"));
+
 				navigator.addView(InvoiceView.VIEW_NAME, new InvoiceView());
 				break;
 		}
