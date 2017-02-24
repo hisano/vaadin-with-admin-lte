@@ -84,12 +84,12 @@
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-server</artifactId>
-			<version>7.7.6</version>
+			<version>8.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-client-compiled</artifactId>
-			<version>7.7.6</version>
+			<version>8.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.thymeleaf</groupId>
